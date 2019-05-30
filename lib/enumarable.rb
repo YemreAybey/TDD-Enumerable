@@ -9,6 +9,10 @@ module Enumerable
         for key in self.keys
           yield key, self[key]
         end
+      elsif self.is_a? Range
+        for num in self
+          yield num
+        end          
       else
         return "You can't use my_each method on #{self.class} class"
       end
