@@ -38,10 +38,10 @@ module Enumerable
     
     def my_select
       if self.is_a? Array
-        resA = []
+        res = []
         self.my_each do |element|
           case yield element
-            when true then del << element
+            when true then res << element
           end
         end
       elsif self.is_a? Hash
