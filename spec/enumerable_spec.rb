@@ -34,7 +34,7 @@ RSpec.describe Enumerable do
         array = [1, 1, 1, 2]
         expect(array.my_inject("neer") { |acc, value| acc * value}).to eql("neerneer")
       end
-
+        
     end
 
 end
